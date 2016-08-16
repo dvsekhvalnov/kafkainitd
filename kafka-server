@@ -36,8 +36,8 @@ DAEMON_NAME=kafka
 PIDFILE=/var/run/kafka-broker.pid
 PATH=$PATH:$DAEMON_PATH
 PROPERTIES_FILE=/etc/kafka/server.properties
-START_SCRIPT=kafka-server-start
-STOP_SCRIPT=kafka-server-stop
+START_SCRIPT=kafka-server-start.sh
+STOP_SCRIPT=kafka-server-stop.sh
 NAME="Kafka Broker"
 
 LOG_FILE=/var/log/kafka/kafka-server.out
