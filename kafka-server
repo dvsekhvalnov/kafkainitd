@@ -39,13 +39,13 @@ PROPERTIES_FILE=/etc/kafka/server.properties
 START_SCRIPT=kafka-server-start.sh
 STOP_SCRIPT=kafka-server-stop.sh
 NAME="Kafka Broker"
-
+USER=kafka
 LOG_FILE=/var/log/kafka/kafka-server.out
 
 case "$1" in
 start)
   echo "Starting $DAEMON_NAME";
-  PID=`$DAEMON_PATH/$START_SCRIPT $PROPERTIES_FILE > $LOG_FILE 2>&1 & echo $!`
+  PID=`/bin/su $USER $DAEMON_PATH/$START_SCRIPT $PROPERTIES_FILE > $LOG_FILE 2>&1 & echo $!`
 
   if [ -z $PID ]; then
       printf "%s\n" "$NAME failed to start"
