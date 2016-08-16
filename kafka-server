@@ -30,7 +30,7 @@
 # Description:       Kafka is a high-throughput distributed messaging system.
 ### END INIT INFO
 
-DAEMON_PATH=/usr/loca/kafka/bin
+DAEMON_PATH=/usr/local/kafka/bin
 DAEMON_NAME=kafka
 
 PIDFILE=/var/run/kafka-broker.pid
